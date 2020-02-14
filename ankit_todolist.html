@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="icon" href="silhouette-3139806_1280.png" type="image/png" sizes="16x16">
+    </head>
+<body>
+    <header class="header1">JavaScript Project </header>
+    
+      <div class="wrapper">
+		<div class="header">
+			<div class="header_bottom">
+				<div class="container">
+										<div class="col-lg-3 col-md-12 col-sm-3 col-xs-7">
+							<div class="header_bottom_left">
+															</div>
+						</div>
+						<div class="col-lg-8 col-md-11 col-sm-8 col-xs-3 menu_nav">
+							<nav class="navbar">
+		    					<div class="collapse navbar-collapse" id="myNavbar">
+							      	<ul class="nav navbar-nav">
+							        	<li class="active"><a href="index.html">HOME</a></li>
+							        	<li class="active"><a href="aakash_addproducts%20and%20tax.html">PRODUCT TAX</a></li>
+							        	<li class="active"><a href="ankit_todolist.html">TO-DO-LIST</a></li>
+							        	<li class="active"><a href="raman_currency.html">CCURRENCY CONVERTER</a></li>
+							      	</ul>
+		    					</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>you can add and delete any thing</li>
+  <li class="checked">Like your daily routines </li>
+  <li>Pending tasks</li>
+  <li>Appointments</li>
+  <li>Your Work</li>
+  
+</ul>
+
+<script>
+
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+    <div class="footer">
+			<div class="container">
+				<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 padding_part">
+					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+						<div class="footer_first">
+                            <div class="social">
+                                 <p class="ab">Contact Us</p>
+								<ul class="text">
+									<a href="https://twitter.com/login?lang=en"><li><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
+									<a https://plus.google.com/discove href=""><li><i class="fa fa-google-plus" aria-hidden="true"></i></li></a>
+									<a href="https://www.instagram.com/?hl=en"><li><i class="fa fa-instagram" aria-hidden="true"></i></li></a>
+                                    <a href=""><li><i class="fa fa-rss" aria-hidden="true"></i></li></a>
+								</ul>
+							</div>
+							<p>2018. All rights reserved. Privacy Policy</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+						<div class="contact_us">
+							<h4>Location</h4>
+							<div class="contact_us_menu">
+								<ul class="location">
+									<a href="https://maps.google.fr"><li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Conestoga College Doon Campus </span></li></a>
+								</ul>
+							</div>
+						</div>
+                    </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+						<div class="contact_us">
+							<h4>NewsLetter</h4>
+							<div class="news_contant">
+								<p class="sb">Enter your email address to get the latest traveling news, special offers and other discount information delivered right to your inbox.</p>
+								
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+        </div>
+</html>
+    

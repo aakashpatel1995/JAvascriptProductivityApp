@@ -1,0 +1,88 @@
+body
+{
+            font-family: Verdana, Arial, sans-serif;
+            background-image: url(horizon-2602227_1920.jpg);
+}
+.header1
+{
+    background-color:darkcyan;
+    padding: 20px 20px;
+    font-family: cursive;
+    color:azure;
+    font-size:4em;
+    text-align: center;
+     background-image: url(shopping-cart-2790225_1280.png);
+    background-repeat: no-repeat;
+    background-position: right;
+   
+   
+}
+.decoration
+{
+ background-color: aliceblue;
+ 
+}
+ .wrapper
+{
+            background-color: #b3c7e6;
+            color: #000066;
+           
+            margin: auto;
+            border-color: aqua solid;
+        }
+nav
+{
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 1em;
+}
+#wrapper
+{
+    background-color: #b3c7e6;
+        color: #000066;
+           
+            margin: auto;
+            border-color: aqua solid;
+}
+
+.img3
+{
+    height:480px;
+    width:100%;
+}
+
+
+.footer
+{
+ margin-top: 2em;
+ background-color: darkcyan;
+ color: aliceblue;
+    font-weight: bold;
+    
+
+}
+
+.text
+
+{
+
+background-color: antiquewhite;  
+    margin-top: 1em;
+    
+}
+.location
+{
+    background-color: antiquewhite;
+    margin-top: 1em;
+}
+.sb
+{
+    background-color: antiquewhite;
+    color:darkcyan;
+    padding : 2px 16px;
+}
+main
+{
+    margin-top: 4em;
+    margin-bottom: 40em;
+}
